@@ -1,6 +1,7 @@
-  %YAML:1.0
+%YAML:1.0
+---
   # data
-  dataset_dir: /home/chan/Documents/SLAM/slambook2/kitti/00
+  dataset_dir: /home/chan/Documents/SLAM/slambook2/kitti/01
 
   # camera intrinsics
   camera.fx: 517.3

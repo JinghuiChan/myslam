@@ -8,7 +8,11 @@ namespace myslam {
     bool Config::SetParameterFile(const std::string &filename) {
         if (config_ == nullptr)
             config_ = std::shared_ptr<Config>(new Config);
-        config_->file_ = cv::FileStorage(filename.c_str(), cv::FileStorage::READ);
+
+        //config_->file_ = cv::FileStorage(filename.c_str(), cv::FileStorage::READ);
+        std::string conf_file = "/home/chan/chan/Workspace/clion/VisualOdometry/config/default.yaml";
+        config_->file_ = cv::FileStorage(conf_file.c_str(), cv::FileStorage::READ);
+        printf("------------\n");
         if (config_->file_.isOpened() == false) {
             LOG(ERROR) << "parameter file " << filename << " does not exist.";
             config_->file_.release();
